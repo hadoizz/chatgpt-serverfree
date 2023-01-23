@@ -7,9 +7,9 @@ dotenv.config()
 
 
 const configuration = new Configuration({
-  
-   apiKey: process.env.OPENAI_SECRET_KEY,
-   
+
+    apiKey: process.env.OPENAI_SECRET_KEY,
+
 });
 
 const openai = new OpenAIApi(configuration);
@@ -19,9 +19,9 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/', async (req, res) => {
-  res.status(200).send({
-    message: 'Hello from CodeX!'
-  })
+    res.status(200).send({
+        message: 'Hello from CodeX!'
+    })
 })
 
 // app.post('/', async (req, res) => {
@@ -37,7 +37,7 @@ app.get('/', async (req, res) => {
 //       frequency_penalty: 0.5, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
 //       presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
 //     });
-    
+
 //     const responseJson = JSON.parse(response.data.choices[0].text);
 
 //     res.status(200).send({
@@ -77,7 +77,7 @@ app.post('/', async (req, res) => {
 
 app.listen(5000, () => {
     console.log('AI server started on http://localhost:5000');
-}) 
+})
 
 
 // POST, SET, GET, DELETE
